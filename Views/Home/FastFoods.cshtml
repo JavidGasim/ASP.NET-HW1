@@ -1,0 +1,18 @@
+﻿@model IEnumerable<WebApplication1.Entities.FastFood>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+    <h1>We have @Model.Count() fast foods</h1>
+
+    @foreach(var item in Model)
+    {
+        <h3>ID: @item.Id</h3>
+        <h3>Fast Food Name: @item.Name</h3>
+        <hr/>
+    }
+</body>
+</html>

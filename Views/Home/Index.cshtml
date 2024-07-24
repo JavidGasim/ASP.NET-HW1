@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* @model IEnumerable<WebApplication1.Models.AllProducts> *@
+
+@model WebApplication1.Models.AllProducts
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <hr />
+
+    <h2>Drinks</h2>
+    @foreach (var d in Model.Drinks)
+    {
+        <h3 style="margin-left:50px">Name of Drink: @d.Name</h3>
+        <hr />
+    }
+
+    <h2>Fast Foods</h2>
+    @foreach (var f in Model.FastFoods)
+    {
+        <h3 style="margin-left:50px">Name of Fast Food: @f.Name</h3>
+        <hr />
+    }
+
+    <h2>Hot Meals</h2>
+    @foreach (var h in Model.HotMeals)
+    {
+        <h3 style="margin-left:50px">Name of Hot Meals: @h.Name</h3>
+        <hr />
+    }
+</div>
